@@ -1,2 +1,2 @@
-# https://CopFriendlyApp.github.io
+# http://CopFriendlyApp.github.io
 CopFriendlyApp E-Seva
