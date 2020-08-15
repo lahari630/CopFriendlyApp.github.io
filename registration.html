@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<html>
+<center><h1>Registration Form</h1></center>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: cream;
+}
+.container {
+    padding: 50px;
+  background-color: lightblue;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<form>
+  <div class="container">
+
+  <label> Firstname: </label>
+<input type="text" name="firstname" placeholder= "Firstname" size="15" required />
+<label> Middlename: </label>
+<input type="text" name="middlename" placeholder="Middlename" size="15" required />
+<label> Lastname: </label>
+<input type="text" name="lastname" placeholder="Lastname" size="15"required />
+<div>
+<label>
+Vioalation:
+</label>
+
+<select>
+<option value="Vioalation">Vioalation</option>
+<option value="Signal jump">Signal Jump</option>
+<option value="over speed">Speeding</option>
+<option value="Drunk and Drive">Drunk&Drive</option>
+<option value="other">other</option>
+</select>
+</div>
+<div>
+<label>
+Gender:
+</label><br>
+<input type="radio" value="Male" name="gender" checked > Male
+<input type="radio" value="Female" name="gender"> Female
+<input type="radio" value="Other" name="gender"> Other
+
+</div>
+<label>
+  <label> License Number: </label>
+<input type="text" name="License Number" placeholder= "000000" size="15" required />
+<label>Date and Time:</label>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.<br></button>
+<p id="demo"></p>
+
+<label> Location:</label>
+
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<label>
+  Repeated Offence:
+</label>
+
+<select>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select><br><br>
+<label>
+  Vechile Type:
+</label>
+
+<select>
+<option value="Vioalation">Motor Cycle</option>
+<option value="Signal jump">Car</option>
+<option value="over speed">Jeep</option>
+<option value="Drunk and Drive">Van</option>
+<option value="other">Taxi</option>
+<option value="other">Truck</option>
+<option value="other">Bus<br><br></option><br><br>
+
+<p>Country Code:</p>
+<input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/>
+
+
+<label>Phone Number:</label>
+<input type="text" name="phone" placeholder="Phone no." size="10"/ required>
+Current Address:
+<textarea cols="80" rows="5" placeholder="Current Address" value="address" required>
+</textarea>
+ <label for="email">Email:</label>
+ <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw">Password:</label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat">Re-type Password:</label>
+    <input type="password" placeholder="Retype Password" name="psw-repeat" required>
+    <!-- <button type="submit" class="registerbtn">Register</button> -->
+	<button onclick="myFunction()">Register</button>
+
+<script>
+function myFunction() {
+  alert("Registration Successful");
+}
+</script>
+</div>
+</form>
+</body>
+</html>

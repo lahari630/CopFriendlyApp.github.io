@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<html>
+<center><h1>Emergency Form</h1></center>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: cream;
+}
+.container {
+    padding: 50px;
+  background-color: lightblue;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<form>
+<div class="container">
+<br><br>
+  <p>Emergency Response Support System (ERSS) is a Pan-India single number (112) based emergency response system for citizens in emergencies. Each States/Union Territory is required to designate a dedicated Emergency Response Centre (ERC) to handle emergency requests. If you require emergency assistance from Police, Fire or Health departments or from any other services, you may:
+<br><br>
+1.Dial 112 from your phone.<br>
+2.Press power button on your smart phone 3 times in quick succession to activate Panic call.<br>
+3.Long press ‘5’ or ‘9’ key on your feature phone to activate Panic call.<br>
+4.Log-on to State ERSS website and place your SOS request.<br>
+5.Email SOS alert to Emergency Response Centre in the State.<br>
+6.Use 112 India mobile app (available in Google Playstore and Apple store) to activate a panic call.<br>
+</p><br><br>
+<label> Location:</label>
+<button onclick="getLocation()">Try It</button>
+<p id="demo"></p>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+<br>
+<div>
+<label>
+Vioalation Type:
+</label>
+<select>
+<option value="Vioalation">Vioalation</option>
+<option value="Accident">Acicident</option>
+<option value="Signal jump">Signal Jump</option>
+<option value="over speed">Speeding</option>
+<option value="Drunk and Drive">Drunk and Drive </option>
+<option value="other">other</option>
+</select>
+</div>
+<br><br>
+<label>Number of people affected:</label>
+<input type="number" name="Number of people affected" placeholder= "0" size="15" required />
+<br><br>
+<br>
+<div class="w3-panel w3-red">
+ <label>Get help from police men:</label>
+  <!-- <button type="button">  SOS</button> -->
+  <button onclick="myFunction()">SOS</button>
+<script>
+function myFunction() {
+  alert("Emergency alert activated");
+}
+</script>
+</div> 
+</form>
+</body>
+</html>

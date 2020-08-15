@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<html>
+<center><h1>Traffic Central Team</h1></center>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: cream;
+}
+.container {
+    padding: 50px;
+  background-color: lightblue;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<form>
+<div class="container">
+  <br><br>
+  <p>A fine is a penalty of money that a court of law or other authority decides has to be paid as punishment for a crime or other offence.<br> The amount of a fine can be determined case by case, but it is often announced in advance.<br>
+A parking attendant issuing a fine for illegal parking.<br>
+The most usual use of the term is for financial punishments for the commission of crimes, especially minor crimes, or as the settlement of a claim.<br> A synonym, typically used in civil law actions, is mulct.<br>
+
+One common example of a fine is money paid for violations of traffic laws.<br> Currently in English common law, relatively small fines are used either in place of or alongside community service orders for low-level criminal offences.<br> Larger fines are also given independently or alongside shorter prison sentences when the judge or magistrate considers a considerable amount of retribution is necessary, but there is unlikely to be significant danger to the public.<br> For instance, fraud is often punished by very large fines since fraudsters are typically banned from the position or profession they abused to commit their crimes.
+</p><br><br>
+<div>
+<label>
+Vioalation Type:
+</label>
+<select>
+<option value="Vioalation">Vioalation</option>
+<option value="Accident">Acicident</option>
+<option value="Signal jump">Signal Jump</option>
+<option value="over speed">Speeding</option>
+<option value="Drunk and Drive">Drunk and Drive </option>
+<option value="other">other</option>
+</select>
+</div>
+<br><br>
+<label>Fine Collected:</label>
+<input type="number" name="Fine Collected" placeholder= "3000" size="15" required /><br>
+<a href="Payments.html">fine collected through digital payment</a>
+<br><br>
+<br>
+<div class="w3-panel w3-red">
+ <label>Get help from police men:</label>
+  <!-- <button type="button">  SOS</button> -->
+   <button onclick="myFunction()">SOS</button>
+<script>
+function myFunction() {
+  alert("Traffic Central Team activated");
+}
+</script>
+</div> 
+</form>
+</body>
+</html>
